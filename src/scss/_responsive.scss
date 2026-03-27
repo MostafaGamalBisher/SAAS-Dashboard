@@ -1,0 +1,15 @@
+// ============================================================
+// RESPONSIVE
+// Breakpoint-based overrides using SCSS variables.
+// CSS custom properties cannot be used inside @media conditions.
+// ============================================================
+
+@use 'variables' as *;
+
+// Add responsive rules here as the project grows.
+// Example:
+// @media (max-width: $breakpoint-md) {
+//   .container {
+//     padding: var(--spacing-sm);
+//   }
+// }

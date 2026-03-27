@@ -1,0 +1,42 @@
+// ============================================================
+// GLOBAL
+// Base element styles using CSS custom properties.
+// No @use needed — :root vars are available everywhere.
+// ============================================================
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-normal);
+  color: var(--color-text);
+  background-color: var(--color-background);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+}
+
+a {
+  color: var(--color-primary);
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+button {
+  cursor: pointer;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: flex-start;
+}
