@@ -5,7 +5,8 @@
   background-color: var(--color-sidebar);
   width: var(--sidebar-width-expanded);
   padding: var(--spacing-xl);
-  height: 100vh;
+  justify-content: center;
+  align-items: center;
   transition: width 0.3s ease;
 
   &__toggle {
@@ -50,6 +51,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    transition: width 0.3s ease;
   }
 
   &__link {
@@ -84,12 +86,13 @@
   }
 
   &__icon {
-    width: 2.4rem;
+    min-width: 2.4rem;
   }
 
   &__label {
     font-size: var(--font-size-side-text);
     font-weight: var(--font-weight-semi-bold);
+    transition: opacity 0.3s ease;
   }
 
   &__badge {
@@ -106,6 +109,7 @@
 .illustration {
   display: flex;
   margin-top: auto;
+  transition: opacity 0.3s ease;
 
   &__image {
     width: 100%;
@@ -135,6 +139,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    flex-shrink: 0;
   }
 
   &__name {
@@ -155,10 +160,11 @@
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  gap: 3rem;
 }
 
 .logout {
-  margin-left: auto;
+  display: flex;
 }
 
 .avatar__img {
@@ -172,6 +178,13 @@
 .collapsed {
   width: 80px;
   margin: var(--spacing-xl);
+  border-radius: var(--spacing-md);
+  justify-content: center;
+  align-items: center;
+
+  .nav-bar__item--active::before {
+    width: 400%;
+  }
 }
 
 .collapsed-label {
@@ -193,4 +206,6 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  justify-content: center;
+  align-items: center;
 }
