@@ -36,3 +36,40 @@ asideToggle.addEventListener('click', () => {
   avatar.classList.toggle('aside-bottom__modifier');
   avatarTitle.classList.toggle('label-modifier');
 });
+
+//---------------Recent Orders-------------
+
+const orders = [
+  {
+    tracking: '#876364',
+    img: './src/assets/img/icons/dashboard-icons/recent-order/product-img/Camera-Lens.png',
+    productName: 'Camera Lens',
+    price: '$178',
+    totalOrder: 325,
+    totalAmount: '$1,46,660',
+  },
+  {
+    tracking: '#876368',
+    img: './src/assets/img/icons/dashboard-icons/recent-order/product-img/Black-Sleep-Dress.png',
+    productName: 'Black Sleep Dress',
+    price: '$14',
+    totalOrder: 53,
+    totalAmount: '$46,660',
+  },
+  {
+    tracking: '#876412',
+    img: './src/assets/img/icons/dashboard-icons/recent-order/product-img/Argan-Oil.png',
+    productName: 'Argan Oil',
+    price: '$21',
+    totalOrder: 78,
+    totalAmount: '$3,46,676',
+  },
+  {
+    tracking: '#876621',
+    img: './src/assets/img/icons/dashboard-icons/recent-order/product-img/EAU-DE-Parfum.png',
+    productName: 'EAU DE Parfum',
+    price: '$32',
+    totalOrder: 98,
+    totalAmount: '$3,46,981',
+  },
+];
