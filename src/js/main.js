@@ -31,7 +31,7 @@ asideToggle.addEventListener('click', () => {
   aside.classList.toggle('collapsed');
   logo.classList.toggle('logo-modifier');
   navLabel.forEach((el) => el.classList.toggle('label-modifier'));
-  navBadge.classList.toggle('label-modifier');
+  navBadge?.classList.toggle('label-modifier');
   illustration.classList.toggle('label-modifier');
   avatar.classList.toggle('aside-bottom__modifier');
   avatarTitle.classList.toggle('label-modifier');

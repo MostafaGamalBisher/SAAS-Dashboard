@@ -28,7 +28,7 @@
 
         <nav class="nav-bar">
           <ul class="nav-bar__list">
-            <li class="nav-bar__item">
+            <li class="nav-bar__item nav-bar__item--active">
               <a href="#dashboard" class="nav-bar__link"
                 ><svg
                   class="nav-bar__icon"
@@ -226,7 +226,49 @@
           /></a>
         </div>
       </aside>
-      <main class="main"></main>
+      <main class="main">
+        <header class="dashboard-header">
+          <h1 class="dashboard-header__title">Dashboard</h1>
+          <div class="dashboard-header__dates">
+            <div class="dashboard-header__date">
+              <span class="dashboard-header__date-text">10-06-2021</span>
+              <svg
+                width="9"
+                height="5"
+                viewBox="0 0 9 5"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.5"
+                  d="M0.5 0.5L4.5 4.5L8.5 0.5"
+                  stroke="black"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+            <div class="dashboard-header__date">
+              <span class="dashboard-header__date-text">10-06-2021</span>
+              <svg
+                width="9"
+                height="5"
+                viewBox="0 0 9 5"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  opacity="0.5"
+                  d="M0.5 0.5L4.5 4.5L8.5 0.5"
+                  stroke="black"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </div>
+          </div>
+        </header>
+      </main>
     </div>
     <script type="module" src="/src/js/main.js"></script>
   </body>

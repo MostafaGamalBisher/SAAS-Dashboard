@@ -1,211 +1,40 @@
-.aside {
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacing-xl);
-  background-color: var(--color-sidebar);
-  width: var(--sidebar-width-expanded);
-  padding: var(--spacing-xl);
-  justify-content: center;
-  align-items: center;
-  transition: width 0.3s ease;
-
-  &__toggle {
-    outline: none;
-    background-color: var(--color-primary);
-    border: none;
-    width: var(--spacing-xxl);
-  }
+.main {
+  padding: var(--spacing-xl) 0;
 }
-.logo {
+
+.dashboard-header {
   display: flex;
   flex-direction: row;
-  gap: var(--spacing-xmd);
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
-  padding-bottom: var(--spacing-md);
-  font-size: var(--font-size-text);
-  font-weight: var(--font-weight-semi-bold);
+  gap: 1rem;
 
-  &-icon {
-    min-width: 4.2rem;
-  }
-
-  &-title {
+  &__title {
+    font-size: var(--font-size-text);
+    font-weight: var(--font-weight-bold);
     color: var(--color-text);
   }
-}
 
-.nav-bar {
-  display: flex;
-  margin-bottom: 20rem;
-
-  &__list {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: var(--spacing-xl);
-  }
-
-  &__item {
+  &__dates {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    transition: width 0.3s ease;
-  }
-
-  &__link {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
     gap: var(--spacing-xmd);
     color: var(--color-text-secondary);
   }
-  &__item--active {
-    position: relative;
-  }
 
-  &__item--active::before {
-    content: '';
-    position: absolute;
-    background: linear-gradient(
-      90deg,
-      rgba(172, 169, 255, 1) 10%,
-      rgba(172, 169, 255, 0) 85%
-    );
-    top: -1.3rem;
-    left: -3rem;
-    width: 45%;
-    height: 200%;
-    opacity: 0.2;
-    border-radius: 0 0.5rem 0.5rem 0;
-  }
-
-  &__item--active &__link {
-    color: var(--color-primary);
-  }
-
-  &__icon {
-    min-width: 2.4rem;
-  }
-
-  &__label {
-    font-size: var(--font-size-side-text);
-    font-weight: var(--font-weight-semi-bold);
-    transition: opacity 0.3s ease;
-  }
-
-  &__badge {
-    margin-left: var(--spacing-xl);
-    padding: 0.1rem var(--spacing-sm);
-    background-color: var(--color-active--bg);
-    color: var(--color-active);
-    font-weight: var(--font-weight-semi-bold);
-    border-radius: var(--spacing-xxl);
-    font-size: var(--font-size-base);
-  }
-}
-
-.illustration {
-  display: flex;
-  margin-top: auto;
-  transition: opacity 0.3s ease;
-
-  &__image {
-    width: 100%;
-  }
-
-  &__btn {
-    background-color: var(--color-primary);
-    color: #ffffff;
-    border: none;
-    border-radius: 0.8rem;
-    padding: var(--spacing-sm) var(--spacing-md);
-    font-weight: var(--font-weight-semi-bold);
-    width: 100%;
-    display: none;
-  }
-}
-
-.avatar {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 1rem;
-  justify-content: flex-start;
-
-  &__title {
+  &__date {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
-    align-items: flex-start;
-    flex-shrink: 0;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-lg);
+    background-color: var(--color-sidebar);
+    border-radius: var(--spacing-sm);
   }
 
-  &__name {
+  &__date-text {
+    font-size: var(--font-size-side-text1);
     font-weight: var(--font-weight-semi-bold);
-    font-size: var(--font-size-side-text2);
-    color: var(--color-text-third);
   }
-
-  &__type {
-    font-size: var(--font-weight-normal);
-    font-size: var(--font-size-base);
-    color: var(--color-text-fourth);
-  }
-}
-
-.aside__bottom {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  gap: 3rem;
-}
-
-.logout {
-  display: flex;
-}
-
-.avatar__img {
-  background-color: rgba(255, 199, 212, 1);
-  border-radius: 1.2rem;
-  min-width: 4.5rem;
-}
-
-//----------------collapse----------
-
-.collapsed {
-  width: 80px;
-  margin: var(--spacing-xl);
-  border-radius: var(--spacing-md);
-  justify-content: center;
-  align-items: center;
-
-  .nav-bar__item--active::before {
-    width: 400%;
-  }
-}
-
-.collapsed-label {
-  display: none;
-}
-
-.logo-modifier {
-  display: flex;
-  flex-direction: column;
-  font-size: 2.2rem;
-  gap: 0.5rem;
-}
-
-.label-modifier {
-  display: none;
-}
-
-.aside-bottom__modifier {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  justify-content: center;
-  align-items: center;
 }

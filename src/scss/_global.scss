@@ -39,4 +39,5 @@ button {
   flex-direction: row;
   align-items: stretch;
   justify-content: flex-start;
+  gap: var(--spacing-xl);
 }
