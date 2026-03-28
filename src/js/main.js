@@ -73,3 +73,27 @@ const orders = [
     totalAmount: '$3,46,981',
   },
 ];
+
+const ordersTable = document.getElementById('ordersTableBody');
+
+function displayOrders(ordersData) {
+  ordersData.forEach((order) => {
+    const row = document.createElement('tr');
+
+    row.innerHTML = `
+              <td class="recent-orders__td">${order.tracking}</td>
+              <td class="recent-orders__td">
+              <div class="recent-orders__product">
+              <img src="${order.img}" alt="${order.productName}"  class="recent-orders__product-img" />
+              ${order.productName}
+               </div>
+              </td>
+              <td class="recent-orders__td">${order.price}</td>
+              <td class="recent-orders__td"><span class='recent-orders__badge'>${order.totalOrder}</span></td>
+              <td class="recent-orders__td">${order.totalAmount}</td>
+    `;
+    ordersTable.appendChild(row);
+  });
+}
+
+displayOrders(orders);
