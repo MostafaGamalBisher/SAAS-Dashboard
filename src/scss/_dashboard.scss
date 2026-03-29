@@ -65,6 +65,7 @@
   &__content {
     display: flex;
     flex-direction: column;
+    white-space: nowrap;
   }
   &__numbers {
     font-weight: var(--font-weight-bolder);
@@ -79,36 +80,44 @@
   }
 }
 
+//------------------dashboard-bottom--------------
+.dashboard-bottom {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-xl);
+  align-items: stretch;
+}
+
 //----------------recent orders-------------
+.card-refrance__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-refrance__title {
+  color: rgba(3, 2, 41, 0.7);
+  font-weight: var(--font-weight-bold);
+  font-size: 1.8rem;
+}
+
+.card-refrance__more {
+  border: none;
+  outline: none;
+  background: none;
+  color: rgba(3, 2, 41, 0.3);
+  font-size: 3rem;
+  font-weight: var(--font-weight-bold);
+}
 
 .recent-orders {
   background-color: var(--color-sidebar);
-  padding: 2.5rem;
+  padding: 1.7rem 2.5rem;
   border-radius: var(--spacing-md);
   display: flex;
   flex-direction: column;
   align-items: stretch;
-
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &__title {
-    color: rgba(3, 2, 41, 0.7);
-    font-weight: var(--font-weight-bold);
-    font-size: 1.8rem;
-  }
-
-  &__more {
-    border: none;
-    outline: none;
-    background: none;
-    color: rgba(3, 2, 41, 0.3);
-    font-size: 3rem;
-    font-weight: var(--font-weight-bold);
-  }
+  flex: 3;
 
   &__table {
     border-collapse: collapse;
@@ -120,7 +129,8 @@
     font-size: var(--font-size-side-text2);
     color: var(--color-text);
     text-align: left;
-    padding: 1.6rem 2.5rem;
+    padding: 1rem 2.5rem;
+    white-space: nowrap;
 
     svg {
       display: inline;
@@ -147,6 +157,13 @@
     max-width: 100%;
   }
 
+  &__product-name {
+    white-space: nowrap;
+    font-weight: var(--font-weight-normal);
+    font-size: var(--font-size-side-text2);
+    color: var(--color-text);
+  }
+
   &__badge {
     display: inline-block;
     padding: 0.7rem 2rem;
@@ -165,4 +182,92 @@
   .recent-orders__td:last-child {
     text-align: right;
   }
+}
+
+//--------------top selling-------------
+.top-selling {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  padding: 2.5rem;
+  background-color: var(--color-sidebar);
+  border-radius: var(--spacing-md);
+
+  &__product {
+    display: flex;
+    gap: var(--spacing-lg);
+    padding: 2.5rem 0;
+    border-bottom: 0.1rem solid rgba(3, 2, 41, 0.05);
+    flex-direction: row;
+
+    &:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+  }
+
+  &__image {
+    width: 9.6rem;
+    height: 9.6rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    justify-content: center;
+    white-space: nowrap;
+  }
+
+  &__product-name {
+    font-weight: var(--font-weight-normal);
+    font-size: 1.5rem;
+    color: var(--color-text-third);
+    cursor: pointer;
+  }
+
+  &__product-stars {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-bold);
+    cursor: pointer;
+  }
+
+  &__product-price {
+    font-size: 1.5rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-third);
+  }
+}
+
+.top-selling .star {
+  color: rgba(3, 2, 41, 0.2);
+}
+.star--filled {
+  color: rgba(255, 214, 107, 1);
+}
+
+//--------------charts---------------
+.dashboard-charts {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-xl);
+}
+
+.reports-chart {
+  flex: 3;
+  background-color: var(--color-sidebar);
+  padding: 2.5rem;
+  border-radius: var(--spacing-md);
+}
+
+.analytics-chart {
+  flex: 2;
+  background-color: var(--color-sidebar);
+  padding: 2.5rem;
+  border-radius: var(--spacing-md);
 }

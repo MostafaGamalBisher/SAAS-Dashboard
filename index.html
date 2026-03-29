@@ -199,16 +199,16 @@
             </li>
           </ul>
         </nav>
-        <div class="illustration">
+        <a class="illustration" href="#">
           <img
             src="./src/assets/img/icons/header-icons/Illustration (2).svg"
             alt="illustration image"
             class="illustration__image"
           />
           <button class="illustration__btn">Upgrade Now</button>
-        </div>
+        </a>
         <div class="aside__bottom">
-          <div class="avatar">
+          <a class="avatar" href="#">
             <img
               src="./src/assets/img/icons/header-icons/avatar.svg"
               alt="profile picture"
@@ -218,7 +218,7 @@
               <span class="avatar__name">Easin Arafat</span>
               <span class="avatar__type">Free Account</span>
             </div>
-          </div>
+          </a>
           <a href="#" class="logout"
             ><img
               src="./src/assets/img/icons/header-icons/Logout-icon.svg"
@@ -386,88 +386,120 @@
             </div>
           </div>
         </div>
-        <section class="recent-orders">
-          <div class="recent-orders__header">
-            <h2 class="recent-orders__title">Recent Orders</h2>
-            <button class="recent-orders__more">&#8943;</button>
+        <div class="dashboard-charts">
+          <div class="reports-chart">
+            <div class="card-refrance__header">
+              <h2 class="card-refrance__title">Reports</h2>
+              <button class="card-refrance__more">&#8943;</button>
+            </div>
+            <div id="reportsChart"></div>
           </div>
-          <table class="recent-orders__table">
-            <thead class="recent-orders__head">
-              <tr>
-                <th class="recent-orders__th">
-                  <span>Tracking no</span
-                  ><svg
-                    width="6"
-                    height="5"
-                    viewBox="0 0 6 5"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g opacity="0.2">
-                      <path
-                        d="M2.4345 4.81539C2.4055 4.78714 2.2815 4.68047 2.1795 4.5811C1.538 3.99854 0.488 2.47881 0.1675 1.68339C0.116 1.56259 0.007 1.25718 0 1.09401C0 0.937652 0.036 0.788602 0.109 0.646371C0.211 0.46907 0.3715 0.326839 0.561 0.248904C0.6925 0.198734 1.086 0.120799 1.093 0.120799C1.5235 0.0428641 2.223 0 2.996 0C3.7325 0 4.4035 0.0428641 4.8405 0.106673C4.8475 0.11398 5.3365 0.191914 5.504 0.277155C5.81 0.433512 6 0.738919 6 1.06576V1.09401C5.9925 1.30687 5.8025 1.75451 5.7955 1.75451C5.4745 2.50706 4.476 3.99172 3.8125 4.58841C3.8125 4.58841 3.642 4.75645 3.5355 4.82952C3.3825 4.9435 3.193 5 3.0035 5C2.792 5 2.595 4.93619 2.4345 4.81539Z"
-                        fill="#030229"
-                      />
-                    </g>
-                  </svg>
-                </th>
-                <th class="recent-orders__th">
-                  <span>Product Name</span
-                  ><svg
-                    width="6"
-                    height="5"
-                    viewBox="0 0 6 5"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g opacity="0.2">
-                      <path
-                        d="M2.4345 4.81539C2.4055 4.78714 2.2815 4.68047 2.1795 4.5811C1.538 3.99854 0.488 2.47881 0.1675 1.68339C0.116 1.56259 0.007 1.25718 0 1.09401C0 0.937652 0.036 0.788602 0.109 0.646371C0.211 0.46907 0.3715 0.326839 0.561 0.248904C0.6925 0.198734 1.086 0.120799 1.093 0.120799C1.5235 0.0428641 2.223 0 2.996 0C3.7325 0 4.4035 0.0428641 4.8405 0.106673C4.8475 0.11398 5.3365 0.191914 5.504 0.277155C5.81 0.433512 6 0.738919 6 1.06576V1.09401C5.9925 1.30687 5.8025 1.75451 5.7955 1.75451C5.4745 2.50706 4.476 3.99172 3.8125 4.58841C3.8125 4.58841 3.642 4.75645 3.5355 4.82952C3.3825 4.9435 3.193 5 3.0035 5C2.792 5 2.595 4.93619 2.4345 4.81539Z"
-                        fill="#030229"
-                      />
-                    </g>
-                  </svg>
-                </th>
-                <th class="recent-orders__th">
-                  <span>Price</span
-                  ><svg
-                    width="6"
-                    height="5"
-                    viewBox="0 0 6 5"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g opacity="0.2">
-                      <path
-                        d="M2.4345 4.81539C2.4055 4.78714 2.2815 4.68047 2.1795 4.5811C1.538 3.99854 0.488 2.47881 0.1675 1.68339C0.116 1.56259 0.007 1.25718 0 1.09401C0 0.937652 0.036 0.788602 0.109 0.646371C0.211 0.46907 0.3715 0.326839 0.561 0.248904C0.6925 0.198734 1.086 0.120799 1.093 0.120799C1.5235 0.0428641 2.223 0 2.996 0C3.7325 0 4.4035 0.0428641 4.8405 0.106673C4.8475 0.11398 5.3365 0.191914 5.504 0.277155C5.81 0.433512 6 0.738919 6 1.06576V1.09401C5.9925 1.30687 5.8025 1.75451 5.7955 1.75451C5.4745 2.50706 4.476 3.99172 3.8125 4.58841C3.8125 4.58841 3.642 4.75645 3.5355 4.82952C3.3825 4.9435 3.193 5 3.0035 5C2.792 5 2.595 4.93619 2.4345 4.81539Z"
-                        fill="#030229"
-                      />
-                    </g>
-                  </svg>
-                </th>
-                <th class="recent-orders__th">
-                  <span>Total Order</span
-                  ><svg
-                    width="6"
-                    height="5"
-                    viewBox="0 0 6 5"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g opacity="0.2">
-                      <path
-                        d="M2.4345 4.81539C2.4055 4.78714 2.2815 4.68047 2.1795 4.5811C1.538 3.99854 0.488 2.47881 0.1675 1.68339C0.116 1.56259 0.007 1.25718 0 1.09401C0 0.937652 0.036 0.788602 0.109 0.646371C0.211 0.46907 0.3715 0.326839 0.561 0.248904C0.6925 0.198734 1.086 0.120799 1.093 0.120799C1.5235 0.0428641 2.223 0 2.996 0C3.7325 0 4.4035 0.0428641 4.8405 0.106673C4.8475 0.11398 5.3365 0.191914 5.504 0.277155C5.81 0.433512 6 0.738919 6 1.06576V1.09401C5.9925 1.30687 5.8025 1.75451 5.7955 1.75451C5.4745 2.50706 4.476 3.99172 3.8125 4.58841C3.8125 4.58841 3.642 4.75645 3.5355 4.82952C3.3825 4.9435 3.193 5 3.0035 5C2.792 5 2.595 4.93619 2.4345 4.81539Z"
-                        fill="#030229"
-                      />
-                    </g>
-                  </svg>
-                </th>
-                <th class="recent-orders__th"><span>Total Amount</span></th>
-              </tr>
-            </thead>
-            <tbody id="ordersTableBody"></tbody>
-          </table>
-        </section>
+          <div class="analytics-chart">
+            <div class="card-refrance__header">
+              <h2 class="card-refrance__title">Analytics</h2>
+              <button class="card-refrance__more">&#8943;</button>
+            </div>
+            <canvas id="analytics"></canvas>
+            <div class="analytics-chart__legend">
+              <span class="legen__item legend__item--sale">Sale</span>
+              <span class="legen__item legend__item--distribute"
+                >Distribute</span
+              >
+              <span class="legen__item legend__item--return">Return</span>
+            </div>
+          </div>
+        </div>
+        <div class="dashboard-bottom">
+          <section class="recent-orders">
+            <div class="card-refrance__header">
+              <h2 class="card-refrance__title">Recent Orders</h2>
+              <button class="card-refrance__more">&#8943;</button>
+            </div>
+            <table class="recent-orders__table">
+              <thead class="recent-orders__head">
+                <tr>
+                  <th class="recent-orders__th">
+                    <span>Tracking no</span
+                    ><svg
+                      width="6"
+                      height="5"
+                      viewBox="0 0 6 5"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.2">
+                        <path
+                          d="M2.4345 4.81539C2.4055 4.78714 2.2815 4.68047 2.1795 4.5811C1.538 3.99854 0.488 2.47881 0.1675 1.68339C0.116 1.56259 0.007 1.25718 0 1.09401C0 0.937652 0.036 0.788602 0.109 0.646371C0.211 0.46907 0.3715 0.326839 0.561 0.248904C0.6925 0.198734 1.086 0.120799 1.093 0.120799C1.5235 0.0428641 2.223 0 2.996 0C3.7325 0 4.4035 0.0428641 4.8405 0.106673C4.8475 0.11398 5.3365 0.191914 5.504 0.277155C5.81 0.433512 6 0.738919 6 1.06576V1.09401C5.9925 1.30687 5.8025 1.75451 5.7955 1.75451C5.4745 2.50706 4.476 3.99172 3.8125 4.58841C3.8125 4.58841 3.642 4.75645 3.5355 4.82952C3.3825 4.9435 3.193 5 3.0035 5C2.792 5 2.595 4.93619 2.4345 4.81539Z"
+                          fill="#030229"
+                        />
+                      </g>
+                    </svg>
+                  </th>
+                  <th class="recent-orders__th">
+                    <span>Product Name</span
+                    ><svg
+                      width="6"
+                      height="5"
+                      viewBox="0 0 6 5"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.2">
+                        <path
+                          d="M2.4345 4.81539C2.4055 4.78714 2.2815 4.68047 2.1795 4.5811C1.538 3.99854 0.488 2.47881 0.1675 1.68339C0.116 1.56259 0.007 1.25718 0 1.09401C0 0.937652 0.036 0.788602 0.109 0.646371C0.211 0.46907 0.3715 0.326839 0.561 0.248904C0.6925 0.198734 1.086 0.120799 1.093 0.120799C1.5235 0.0428641 2.223 0 2.996 0C3.7325 0 4.4035 0.0428641 4.8405 0.106673C4.8475 0.11398 5.3365 0.191914 5.504 0.277155C5.81 0.433512 6 0.738919 6 1.06576V1.09401C5.9925 1.30687 5.8025 1.75451 5.7955 1.75451C5.4745 2.50706 4.476 3.99172 3.8125 4.58841C3.8125 4.58841 3.642 4.75645 3.5355 4.82952C3.3825 4.9435 3.193 5 3.0035 5C2.792 5 2.595 4.93619 2.4345 4.81539Z"
+                          fill="#030229"
+                        />
+                      </g>
+                    </svg>
+                  </th>
+                  <th class="recent-orders__th">
+                    <span>Price</span
+                    ><svg
+                      width="6"
+                      height="5"
+                      viewBox="0 0 6 5"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.2">
+                        <path
+                          d="M2.4345 4.81539C2.4055 4.78714 2.2815 4.68047 2.1795 4.5811C1.538 3.99854 0.488 2.47881 0.1675 1.68339C0.116 1.56259 0.007 1.25718 0 1.09401C0 0.937652 0.036 0.788602 0.109 0.646371C0.211 0.46907 0.3715 0.326839 0.561 0.248904C0.6925 0.198734 1.086 0.120799 1.093 0.120799C1.5235 0.0428641 2.223 0 2.996 0C3.7325 0 4.4035 0.0428641 4.8405 0.106673C4.8475 0.11398 5.3365 0.191914 5.504 0.277155C5.81 0.433512 6 0.738919 6 1.06576V1.09401C5.9925 1.30687 5.8025 1.75451 5.7955 1.75451C5.4745 2.50706 4.476 3.99172 3.8125 4.58841C3.8125 4.58841 3.642 4.75645 3.5355 4.82952C3.3825 4.9435 3.193 5 3.0035 5C2.792 5 2.595 4.93619 2.4345 4.81539Z"
+                          fill="#030229"
+                        />
+                      </g>
+                    </svg>
+                  </th>
+                  <th class="recent-orders__th">
+                    <span>Total Order</span
+                    ><svg
+                      width="6"
+                      height="5"
+                      viewBox="0 0 6 5"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.2">
+                        <path
+                          d="M2.4345 4.81539C2.4055 4.78714 2.2815 4.68047 2.1795 4.5811C1.538 3.99854 0.488 2.47881 0.1675 1.68339C0.116 1.56259 0.007 1.25718 0 1.09401C0 0.937652 0.036 0.788602 0.109 0.646371C0.211 0.46907 0.3715 0.326839 0.561 0.248904C0.6925 0.198734 1.086 0.120799 1.093 0.120799C1.5235 0.0428641 2.223 0 2.996 0C3.7325 0 4.4035 0.0428641 4.8405 0.106673C4.8475 0.11398 5.3365 0.191914 5.504 0.277155C5.81 0.433512 6 0.738919 6 1.06576V1.09401C5.9925 1.30687 5.8025 1.75451 5.7955 1.75451C5.4745 2.50706 4.476 3.99172 3.8125 4.58841C3.8125 4.58841 3.642 4.75645 3.5355 4.82952C3.3825 4.9435 3.193 5 3.0035 5C2.792 5 2.595 4.93619 2.4345 4.81539Z"
+                          fill="#030229"
+                        />
+                      </g>
+                    </svg>
+                  </th>
+                  <th class="recent-orders__th"><span>Total Amount</span></th>
+                </tr>
+              </thead>
+              <tbody id="ordersTableBody"></tbody>
+            </table>
+          </section>
+          <section class="top-selling">
+            <div class="card-refrance__header">
+              <h2 class="card-refrance__title">Top selling Products</h2>
+              <button class="card-refrance__more">&#8943;</button>
+            </div>
+            <div class="top-selling__products"></div>
+          </section>
+        </div>
       </main>
     </div>
     <script type="module" src="/src/js/main.js"></script>

@@ -3,6 +3,7 @@
 // Import modules here and initialize the application.
 // ============================================================
 import '../scss/main.scss';
+import ApexCharts from 'apexcharts';
 
 const navBarElements = document.querySelectorAll('.nav-bar__item');
 
@@ -76,24 +77,181 @@ const orders = [
 
 const ordersTable = document.getElementById('ordersTableBody');
 
-function displayOrders(ordersData) {
+const displayOrders = (ordersData) => {
   ordersData.forEach((order) => {
     const row = document.createElement('tr');
 
     row.innerHTML = `
               <td class="recent-orders__td">${order.tracking}</td>
               <td class="recent-orders__td">
-              <div class="recent-orders__product">
+              <a href="#" class="recent-orders__product">
               <img src="${order.img}" alt="${order.productName}"  class="recent-orders__product-img" />
-              ${order.productName}
-               </div>
+              <span class="recent-orders__product-name">${order.productName}</span>
+              </a>
               </td>
               <td class="recent-orders__td">${order.price}</td>
               <td class="recent-orders__td"><span class='recent-orders__badge'>${order.totalOrder}</span></td>
               <td class="recent-orders__td">${order.totalAmount}</td>
     `;
+
     ordersTable.appendChild(row);
   });
-}
+};
 
 displayOrders(orders);
+
+//---------------top selling------------
+const topProducts = [
+  {
+    img: './src/assets/img/icons/dashboard-icons/top-products/nike-shoes-balck-pattern.png',
+    name: 'NIKE Shoes Black Pattern',
+    stars: 4,
+    price: '$87',
+  },
+  {
+    img: './src/assets/img/icons/dashboard-icons/top-products/iphone-12.png',
+    name: 'iPhone 12',
+    stars: 4,
+    price: '$987',
+  },
+];
+
+const renderStars = (count) => {
+  let stars = '';
+
+  for (let i = 1; i <= 5; i++) {
+    if (i <= count) {
+      stars += `<span class="star--filled">★</span>`;
+    } else {
+      stars += `<span class="star">★</span>`;
+    }
+  }
+  return stars;
+};
+
+const topSellingProducts = document.querySelector('.top-selling__products');
+
+const displayTopSelling = (productData) => {
+  productData.forEach((product) => {
+    const card = document.createElement('a');
+    card.className = 'top-selling__product';
+    card.href = '#';
+
+    card.innerHTML = `
+    
+    <div class="top-selling__image-wrapper">
+    <img src="${product.img}" alt="${product.name}" class="top-selling__image" />
+    </div>
+    <div class="top-selling__content">
+    <span class="top-selling__product-name">${product.name}</span>
+    <div class="top-selling__product-stars">${renderStars(product.stars)}</div>
+    <span class="top-selling__product-price">${product.price}</span>
+    </div>
+    
+    `;
+
+    topSellingProducts.appendChild(card);
+  });
+};
+
+displayTopSelling(topProducts);
+
+//-----------charts--------------
+
+//------------reports Chart---------
+
+// const reportsChart = document.getElementById('reportsChart');
+
+const reportsOptions = {
+  chart: {
+    type: 'area',
+    height: 300,
+    toolbar: { show: false },
+  },
+  stroke: {
+    curve: 'smooth',
+    width: 3,
+  },
+  fill: {
+    type: 'gradient',
+    gradient: {
+      shade: 'light',
+      type: 'horizontal', // horizontal gradient on the line
+      shadeIntensity: 1,
+      colorStops: [
+        [
+          { offset: 0, color: 'rgba(91, 196, 255, 1)', opacity: 0.1 },
+          { offset: 100, color: 'rgba(255, 91, 239, 1)', opacity: 0.03 },
+        ],
+        [
+          { offset: 0, color: 'rgba(255, 91, 239, 1)', opacity: 0.1 },
+          { offset: 100, color: 'rgba(91, 196, 255, 1)', opacity: 0 },
+        ],
+      ],
+
+      opacityFrom: 0.3,
+      opacityTo: 0,
+      // stops: [0, 80],
+    },
+  },
+  series: [
+    {
+      name: 'Sales',
+      data: [45, 60, 45, 50, 65, 47, 55, 60, 65, 70],
+    },
+    // {
+    //   name: 'Revenue',
+    //   data: [30, 40, 55, 35, 45, 65, 40, 55, 45, 80],
+    // },
+  ],
+  xaxis: {
+    crosshairs: {
+      stroke: {
+        dashArray: 4,
+      },
+    },
+    categories: [
+      '10am',
+      '11am',
+      '12am',
+      '01am',
+      '02am',
+      '03am',
+      '04am',
+      '05am',
+      '06am',
+      '07am',
+    ],
+  },
+  yaxis: {
+    min: 0,
+    max: 100,
+    tickAmount: 5,
+  },
+
+  grid: {
+    xaxis: { lines: { show: false } },
+    yaxis: { lines: { show: true } },
+    borderColor: 'rgba(3, 2, 41, 0.05)',
+  },
+  legend: { show: false },
+  markers: {
+    size: 4,
+    colors: ['#ffffff'],
+    strokeColors: ['rgba(174, 143, 247, 1)'],
+    strokeWidth: 2.2,
+  },
+  dataLabels: { enabled: false },
+  tooltip: {
+    theme: 'dark',
+    x: { show: false },
+  },
+  colors: ['rgba(91, 196, 255, 1)', 'rgba(255, 91, 239, 1)'],
+};
+
+const reportsChart = new ApexCharts(
+  document.querySelector('#reportsChart'),
+  reportsOptions
+);
+
+reportsChart.render();
