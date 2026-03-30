@@ -188,11 +188,7 @@ const reportsOptions = {
       ],
       opacityFrom: 0.3,
       opacityTo: 0,
-<<<<<<< HEAD
-      stops: [0, 80],
-=======
       stops: [0, 100],
->>>>>>> 2b8a8915f21cc3dddebbf0336eac996c32ac9b76
     },
   },
   series: [
@@ -355,3 +351,12 @@ const analyticsChart = new ApexCharts(
   analyticsOptions
 );
 analyticsChart.render();
+
+//-----------burger-menu----------
+
+const burgerMenu = document.querySelector('.burger-menu');
+const navBar = document.querySelector('.nav-bar');
+
+burgerMenu?.addEventListener('click', () => {
+  navBar.classList.toggle('nav-bar--open');
+});
