@@ -51,7 +51,7 @@
               >
             </li>
             <li class="nav-bar__item">
-              <a href="#analytics" class="nav-bar__link"
+              <a href="#analytic" class="nav-bar__link"
                 ><svg
                   width="24"
                   height="24"
@@ -205,7 +205,7 @@
             alt="illustration image"
             class="illustration__image"
           />
-          <button class="illustration__btn">Upgrade Now</button>
+          <button type="button" class="upgrade-now">Upgrade Now</button>
         </a>
         <div class="aside__bottom">
           <a class="avatar" href="#">
@@ -399,13 +399,26 @@
               <h2 class="card-refrance__title">Analytics</h2>
               <button class="card-refrance__more">&#8943;</button>
             </div>
-            <canvas id="analytics"></canvas>
+            <div id="analytics"></div>
             <div class="analytics-chart__legend">
-              <span class="legen__item legend__item--sale">Sale</span>
-              <span class="legen__item legend__item--distribute"
-                >Distribute</span
-              >
-              <span class="legen__item legend__item--return">Return</span>
+              <div class="legend__item">
+                <span
+                  class="legend__item--color legend__item--color-sale"
+                ></span>
+                <span class="legend__item--sale">Sale</span>
+              </div>
+              <div class="legend__item">
+                <span
+                  class="legend__item--color legend__item--color-distribute"
+                ></span>
+                <span class="legend__item--distribute">Distribute</span>
+              </div>
+              <div class="legend__item">
+                <span
+                  class="legend__item--color legend__item--color-return"
+                ></span>
+                <span class="legend__item--return">Return</span>
+              </div>
             </div>
           </div>
         </div>
@@ -494,7 +507,9 @@
           </section>
           <section class="top-selling">
             <div class="card-refrance__header">
-              <h2 class="card-refrance__title">Top selling Products</h2>
+              <h2 class="card-refrance__title top-selling__header-modifier">
+                Top selling Products
+              </h2>
               <button class="card-refrance__more">&#8943;</button>
             </div>
             <div class="top-selling__products"></div>

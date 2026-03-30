@@ -1,0 +1,35 @@
+.statistics-cards {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-xl);
+
+  &__card {
+    padding: var(--spacing-xl);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: var(--spacing-md);
+    gap: 2.3rem;
+    background-color: var(--color-sidebar);
+    flex: 1;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    white-space: nowrap;
+  }
+  &__numbers {
+    font-weight: var(--font-weight-bolder);
+    font-size: 2.2rem;
+    color: var(--color-text-third);
+  }
+
+  &__type {
+    font-weight: var(--font-weight-normal);
+    font-size: var(--font-size-side-text1);
+    color: var(--color-text-secondary);
+  }
+}
