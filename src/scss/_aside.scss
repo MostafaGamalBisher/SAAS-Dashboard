@@ -182,7 +182,9 @@
   align-items: center;
 
   .nav-bar__item--active::before {
+    height: 200%;
     width: 400%;
+    left: -3rem;
   }
 }
 

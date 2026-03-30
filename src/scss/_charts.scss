@@ -26,6 +26,11 @@
   align-items: stretch;
   flex-direction: column;
 
+  #analytics {
+    padding: 2.5rem;
+    align-self: center;
+  }
+
   &__legend {
     display: flex;
     gap: 4rem;

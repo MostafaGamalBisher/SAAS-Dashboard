@@ -263,6 +263,19 @@ const reportsOptions = {
     x: { show: false },
   },
   colors: ['rgba(91, 196, 255, 1)', 'rgba(255, 91, 239, 1)'],
+  responsive: [
+    {
+      breakpoint: 768,
+      options: {
+        chart: {
+          height: 200,
+        },
+        legend: {
+          show: false,
+        },
+      },
+    },
+  ],
 };
 
 const reportsChart = new ApexCharts(
@@ -319,6 +332,19 @@ const analyticsOptions = {
   dataLabels: { enabled: false },
   legend: { show: false },
   stroke: { width: 1 },
+  responsive: [
+    {
+      breakpoint: 768,
+      options: {
+        chart: {
+          height: 200,
+        },
+        legend: {
+          show: false,
+        },
+      },
+    },
+  ],
 };
 
 const analyticsChart = new ApexCharts(
