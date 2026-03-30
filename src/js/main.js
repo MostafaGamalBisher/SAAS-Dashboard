@@ -188,10 +188,9 @@ const reportsOptions = {
           { offset: 100, color: 'rgba(91, 196, 255, 1)', opacity: 0 },
         ],
       ],
-
       opacityFrom: 0.3,
       opacityTo: 0,
-      // stops: [0, 80],
+      stops: [0, 80],
     },
   },
   series: [
