@@ -160,8 +160,6 @@ displayTopSelling(topProducts);
 
 //------------reports Chart---------
 
-// const reportsChart = document.getElementById('reportsChart');
-
 const reportsOptions = {
   chart: {
     type: 'area',
@@ -176,7 +174,7 @@ const reportsOptions = {
     type: 'gradient',
     gradient: {
       shade: 'light',
-      type: 'horizontal', // horizontal gradient on the line
+      type: 'horizontal',
       shadeIntensity: 1,
       colorStops: [
         [
@@ -191,7 +189,7 @@ const reportsOptions = {
 
       opacityFrom: 0.3,
       opacityTo: 0,
-      // stops: [0, 80],
+      stops: [0, 100],
     },
   },
   series: [
@@ -199,15 +197,25 @@ const reportsOptions = {
       name: 'Sales',
       data: [45, 60, 45, 50, 65, 47, 55, 60, 65, 70],
     },
-    // {
-    //   name: 'Revenue',
-    //   data: [30, 40, 55, 35, 45, 65, 40, 55, 45, 80],
-    // },
+    {
+      name: 'Revenue',
+      data: [30, 40, 55, 35, 45, 65, 40, 55, 45, 80],
+    },
   ],
   xaxis: {
     crosshairs: {
       stroke: {
+        color: 'rgba(3, 2, 41, 0.2)',
+        width: 1,
         dashArray: 4,
+      },
+    },
+    labels: {
+      style: {
+        fontSize: '12px',
+        fontFamily: 'Nunito, sans-serif',
+        fontWeight: 400,
+        colors: 'rgba(3, 2, 41, 0.4)',
       },
     },
     categories: [
@@ -224,6 +232,14 @@ const reportsOptions = {
     ],
   },
   yaxis: {
+    labels: {
+      style: {
+        fontSize: '12px',
+        fontFamily: 'Nunito, sans-serif',
+        fontWeight: 400,
+        colors: 'rgba(3, 2, 41, 0.4)',
+      },
+    },
     min: 0,
     max: 100,
     tickAmount: 5,
@@ -255,3 +271,58 @@ const reportsChart = new ApexCharts(
 );
 
 reportsChart.render();
+
+//------------donut Chart---------
+
+const analyticsOptions = {
+  chart: {
+    type: 'donut',
+    height: 216,
+  },
+  series: [60, 20, 20],
+  labels: ['Sale', 'Distribute', 'Return'],
+  colors: [
+    'rgba(91, 147, 255, 1)',
+    'rgba(255, 214, 107, 1)',
+    'rgba(255, 143, 107, 1)',
+  ],
+  plotOptions: {
+    pie: {
+      donut: {
+        size: '75%',
+        labels: {
+          show: true,
+          value: {
+            show: true,
+            fontSize: '30px',
+            fontFamily: 'Nunito, sans-serif',
+            fontWeight: 800,
+            color: 'rgba(3, 2, 41, 1)',
+          },
+          total: {
+            show: true,
+            label: 'Transactions',
+            fontSize: '16px',
+            fontFamily: 'Nunito, sans-serif',
+            fontWeight: 400,
+            color: 'rgba(3, 2, 41, 0.5)',
+            formatter: (w) => {
+              const total = w.globals.seriesTotals.reduce((a, b) => a + b, 0);
+              const first = w.globals.seriesTotals[0];
+              return Math.round((first / total) * 100) + '%';
+            },
+          },
+        },
+      },
+    },
+  },
+  dataLabels: { enabled: false },
+  legend: { show: false },
+  stroke: { width: 1 },
+};
+
+const analyticsChart = new ApexCharts(
+  document.querySelector('#analytics'),
+  analyticsOptions
+);
+analyticsChart.render();

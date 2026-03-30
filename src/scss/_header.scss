@@ -1,0 +1,36 @@
+.dashboard-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  &__title {
+    font-size: var(--font-size-text);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text);
+  }
+
+  &__dates {
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-xmd);
+    color: var(--color-text-secondary);
+  }
+
+  &__date {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) var(--spacing-lg);
+    background-color: var(--color-sidebar);
+    border-radius: var(--spacing-sm);
+  }
+
+  &__date-text {
+    font-size: var(--font-size-side-text1);
+    font-weight: var(--font-weight-semi-bold);
+  }
+}

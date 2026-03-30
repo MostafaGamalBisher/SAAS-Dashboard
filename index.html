@@ -399,13 +399,26 @@
               <h2 class="card-refrance__title">Analytics</h2>
               <button class="card-refrance__more">&#8943;</button>
             </div>
-            <canvas id="analytics"></canvas>
+            <div class="analytics-chart" id="analytics"></div>
             <div class="analytics-chart__legend">
-              <span class="legen__item legend__item--sale">Sale</span>
-              <span class="legen__item legend__item--distribute"
-                >Distribute</span
-              >
-              <span class="legen__item legend__item--return">Return</span>
+              <div class="legend__item">
+                <span
+                  class="legend__item--color legend__item--color-sale"
+                ></span>
+                <span class="legend__item--sale">Sale</span>
+              </div>
+              <div class="legend__item">
+                <span
+                  class="legend__item--color legend__item--color-distribute"
+                ></span>
+                <span class="legend__item--distribute">Distribute</span>
+              </div>
+              <div class="legend__item">
+                <span
+                  class="legend__item--color legend__item--color-return"
+                ></span>
+                <span class="legend__item--return">Return</span>
+              </div>
             </div>
           </div>
         </div>

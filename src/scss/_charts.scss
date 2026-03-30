@@ -1,0 +1,62 @@
+.dashboard-charts {
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-xl);
+}
+
+.reports-chart {
+  flex: 3;
+  background-color: var(--color-sidebar);
+  padding: 2.5rem;
+  border-radius: var(--spacing-md);
+  overflow: hidden;
+
+  #reportsChart {
+    margin: 0 -2.5rem -2.5rem -2.5rem;
+  }
+}
+
+.analytics-chart {
+  flex: 2;
+  background-color: var(--color-sidebar);
+  padding: 2.5rem;
+  border-radius: var(--spacing-md);
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+
+  &__legend {
+    display: flex;
+    gap: 4rem;
+    font-weight: var(--font-weight-semi-bold);
+    font-size: var(--font-size-side-text);
+    align-items: stretch;
+    justify-content: center;
+    color: rgba(3, 2, 41, 0.7);
+  }
+  .legend__item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-md);
+
+    &--color {
+      width: 1.5rem;
+      height: 1.5rem;
+      border-radius: 0.5rem;
+    }
+    &--color-sale {
+      background-color: rgba(91, 147, 255, 1);
+    }
+
+    &--color-distribute {
+      background-color: rgba(255, 214, 107, 1);
+    }
+
+    &--color-return {
+      background-color: rgba(255, 143, 107, 1);
+    }
+  }
+}
