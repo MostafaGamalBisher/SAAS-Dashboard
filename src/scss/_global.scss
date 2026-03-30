@@ -38,6 +38,7 @@ button {
   display: flex;
   flex-direction: row;
   align-items: stretch;
-  justify-content: flex-start;
+  justify-content: center;
   gap: var(--spacing-xl);
+  margin: 0 auto;
 }
