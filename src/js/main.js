@@ -4,6 +4,12 @@
 // ============================================================
 import '../scss/main.scss';
 import ApexCharts from 'apexcharts';
+import cameraLens from '../assets/img/icons/dashboard-icons/recent-order/product-img/Camera-Lens.png';
+import blackSleepDress from '../assets/img/icons/dashboard-icons/recent-order/product-img/Black-Sleep-Dress.png';
+import arganOil from '../assets/img/icons/dashboard-icons/recent-order/product-img/Argan-Oil.png';
+import eauDeParfum from '../assets/img/icons/dashboard-icons/recent-order/product-img/EAU-DE-Parfum.png';
+import nikeShoes from '../assets/img/icons/dashboard-icons/top-products/nike-shoes-balck-pattern.png';
+import iphone12 from '../assets/img/icons/dashboard-icons/top-products/iphone-12.png';
 
 const navBarElements = document.querySelectorAll('.nav-bar__item');
 
@@ -46,9 +52,7 @@ function getImageUrl(path) {
 const orders = [
   {
     tracking: '#876364',
-    img: getImageUrl(
-      './src/assets/img/icons/dashboard-icons/recent-order/product-img/Camera-Lens.png'
-    ),
+    img: cameraLens,
     productName: 'Camera Lens',
     price: '$178',
     totalOrder: 325,
@@ -56,9 +60,7 @@ const orders = [
   },
   {
     tracking: '#876368',
-    img: getImageUrl(
-      './src/assets/img/icons/dashboard-icons/recent-order/product-img/Black-Sleep-Dress.png'
-    ),
+    img: blackSleepDress,
     productName: 'Black Sleep Dress',
     price: '$14',
     totalOrder: 53,
@@ -66,9 +68,7 @@ const orders = [
   },
   {
     tracking: '#876412',
-    img: getImageUrl(
-      './src/assets/img/icons/dashboard-icons/recent-order/product-img/Argan-Oil.png'
-    ),
+    img: arganOil,
     productName: 'Argan Oil',
     price: '$21',
     totalOrder: 78,
@@ -76,9 +76,7 @@ const orders = [
   },
   {
     tracking: '#876621',
-    img: getImageUrl(
-      './src/assets/img/icons/dashboard-icons/recent-order/product-img/EAU-DE-Parfum.png'
-    ),
+    img: eauDeParfum,
     productName: 'EAU DE Parfum',
     price: '$32',
     totalOrder: 98,
@@ -114,17 +112,13 @@ displayOrders(orders);
 //---------------top selling------------
 const topProducts = [
   {
-    img: getImageUrl(
-      './src/assets/img/icons/dashboard-icons/top-products/nike-shoes-balck-pattern.png'
-    ),
+    img: nikeShoes,
     name: 'NIKE Shoes Black Pattern',
     stars: 4,
     price: '$87',
   },
   {
-    img: getImageUrl(
-      './src/assets/img/icons/dashboard-icons/top-products/iphone-12.png'
-    ),
+    img: iphone12,
     name: 'iPhone 12',
     stars: 4,
     price: '$987',
