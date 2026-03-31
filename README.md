@@ -1,106 +1,80 @@
-# Project Name
+# SAAS Dashboard
 
-A brief one-sentence description of what this project does.
+A responsive SAAS dashboard UI built with vanilla JavaScript, SCSS, and ApexCharts. This project was developed as part of the Al-Mdrasa Frontend Diploma (Batch 5).
 
 ## Live Demo
 
-[View Live →](https://your-username.github.io/project-name)
+[View Live](https://mostafagamalbisher.github.io/SAAS-Dashboard/)
 
 ## Screenshots
 
-<!-- Add screenshots here after the project is complete -->
+![Dashboard Preview](<./src/assets/img/icons/header-icons/Illustration%20(2).svg>)
 
 ## Features
 
-- Feature one
-- Feature two
-- Feature three
+- Collapsible sidebar with smooth transitions
+- Dynamic navigation with active state management
+- Responsive layout with mobile support
+- Interactive line chart (Reports) built with ApexCharts
+- Interactive donut chart (Analytics) built with ApexCharts
+- Recent Orders table rendered dynamically from a data array
+- Top Selling Products rendered dynamically with star ratings
+- Stats cards with live data simulation
+- Reusable component architecture
 
 ## Tech Stack
 
-- HTML5
-- SCSS (compiled by Parcel)
-- JavaScript (ES Modules)
-- Parcel (bundler + dev server)
-
-## Getting Started
-
-### Prerequisites
-
-- [Node.js](https://nodejs.org/) installed
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/your-username/project-name.git
-
-# Navigate into the project folder
-cd project-name
-
-# Install dependencies
-npm install
-```
-
-### Development
-
-```bash
-# Start dev server — watches all files and recompiles automatically
-npm run dev
-```
-
-Open [http://localhost:1234](http://localhost:1234) in your browser.
-
-### Production Build
-
-```bash
-# Compile and bundle everything for production
-npm run build
-```
-
-### Code Quality
-
-```bash
-# Run ESLint — checks for JS errors and bad patterns
-npm run lint
-
-# Run Prettier — formats all files
-npm run format
-```
+- HTML5 — semantic markup
+- SCSS — BEM naming convention, CSS custom properties, modular file structure
+- Vanilla JavaScript — ES Modules, DOM manipulation, dynamic rendering
+- ApexCharts — interactive charts
+- Vite — build tool and dev server
 
 ## Project Structure
 
 ```
-project-name/
-├── src/
-│   ├── assets/
-│   │   ├── img/
-│   │   │   ├── icons/
-│   │   │   └── images/
-│   │   └── videos/
-│   ├── js/
-│   │   └── main.js         ← JS entry point
-│   └── scss/
-│       ├── _variables.scss ← CSS custom properties + SCSS breakpoints
-│       ├── _reset.scss     ← browser normalize
-│       ├── _global.scss    ← base element styles
-│       ├── _responsive.scss← media queries
-│       └── main.scss       ← entry point, imports all partials
-├── .gitignore
-├── .prettierignore
-├── .prettierrc
-├── eslint.config.js
+SAAS-Dashboard/
 ├── index.html
-└── package.json
+├── vite.config.js
+├── src/
+│   ├── js/
+│   │   └── main.js
+│   ├── scss/
+│   │   ├── main.scss
+│   │   ├── _variables.scss
+│   │   ├── _reset.scss
+│   │   ├── _global.scss
+│   │   ├── _aside.scss
+│   │   ├── _dashboard.scss
+│   │   └── _responsive.scss
+│   └── assets/
+│       └── img/
 ```
+
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+## What I Learned
+
+- BEM methodology applied consistently across a multi-component project
+- CSS custom properties as a design token system
+- Dynamic DOM rendering from data arrays — simulating API-driven UI
+- ApexCharts configuration and customization
+- Vite as a modern build tool replacing Parcel
+- Debugging Windows-specific Node.js tooling issues
+- Responsive design for dashboard layouts
 
 ## Author
 
-**Mostafa Gamal Bisher**
-
-- GitHub: [@your-username](https://github.com/your-username)
-- LinkedIn: [your-profile](https://linkedin.com/in/your-profile)
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
+Mostafa Gamal Bisher
+[GitHub](https://github.com/MostafaGamalBisher) | [LinkedIn](https://linkedin.com/in/mostafagamalbisher/)
