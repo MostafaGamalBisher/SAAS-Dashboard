@@ -45,9 +45,6 @@ asideToggle.addEventListener('click', () => {
 });
 
 //---------------Recent Orders-------------
-function getImageUrl(path) {
-  return new URL(path, import.meta.url).href;
-}
 
 const orders = [
   {
