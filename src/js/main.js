@@ -186,7 +186,6 @@ const reportsOptions = {
           { offset: 100, color: 'rgba(91, 196, 255, 1)', opacity: 0 },
         ],
       ],
-
       opacityFrom: 0.3,
       opacityTo: 0,
       stops: [0, 100],
@@ -352,3 +351,12 @@ const analyticsChart = new ApexCharts(
   analyticsOptions
 );
 analyticsChart.render();
+
+//-----------burger-menu----------
+
+const burgerMenu = document.querySelector('.burger-menu');
+const navBar = document.querySelector('.nav-bar');
+
+burgerMenu?.addEventListener('click', () => {
+  navBar.classList.toggle('nav-bar--open');
+});

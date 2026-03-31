@@ -8,11 +8,13 @@
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint src/js/",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
     "eslint": "^10.1.0",
+    "gh-pages": "^6.3.0",
     "globals": "^17.4.0",
     "prettier": "^3.8.1",
     "sass": "^1.98.0",
