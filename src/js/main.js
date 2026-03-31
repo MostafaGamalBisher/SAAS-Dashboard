@@ -39,11 +39,16 @@ asideToggle.addEventListener('click', () => {
 });
 
 //---------------Recent Orders-------------
+function getImageUrl(path) {
+  return new URL(path, import.meta.url).href;
+}
 
 const orders = [
   {
     tracking: '#876364',
-    img: './src/assets/img/icons/dashboard-icons/recent-order/product-img/Camera-Lens.png',
+    img: getImageUrl(
+      './src/assets/img/icons/dashboard-icons/recent-order/product-img/Camera-Lens.png'
+    ),
     productName: 'Camera Lens',
     price: '$178',
     totalOrder: 325,
@@ -51,7 +56,9 @@ const orders = [
   },
   {
     tracking: '#876368',
-    img: './src/assets/img/icons/dashboard-icons/recent-order/product-img/Black-Sleep-Dress.png',
+    img: getImageUrl(
+      './src/assets/img/icons/dashboard-icons/recent-order/product-img/Black-Sleep-Dress.png'
+    ),
     productName: 'Black Sleep Dress',
     price: '$14',
     totalOrder: 53,
@@ -59,7 +66,9 @@ const orders = [
   },
   {
     tracking: '#876412',
-    img: './src/assets/img/icons/dashboard-icons/recent-order/product-img/Argan-Oil.png',
+    img: getImageUrl(
+      './src/assets/img/icons/dashboard-icons/recent-order/product-img/Argan-Oil.png'
+    ),
     productName: 'Argan Oil',
     price: '$21',
     totalOrder: 78,
@@ -67,7 +76,9 @@ const orders = [
   },
   {
     tracking: '#876621',
-    img: './src/assets/img/icons/dashboard-icons/recent-order/product-img/EAU-DE-Parfum.png',
+    img: getImageUrl(
+      './src/assets/img/icons/dashboard-icons/recent-order/product-img/EAU-DE-Parfum.png'
+    ),
     productName: 'EAU DE Parfum',
     price: '$32',
     totalOrder: 98,
@@ -103,13 +114,17 @@ displayOrders(orders);
 //---------------top selling------------
 const topProducts = [
   {
-    img: './src/assets/img/icons/dashboard-icons/top-products/nike-shoes-balck-pattern.png',
+    img: getImageUrl(
+      './src/assets/img/icons/dashboard-icons/top-products/nike-shoes-balck-pattern.png'
+    ),
     name: 'NIKE Shoes Black Pattern',
     stars: 4,
     price: '$87',
   },
   {
-    img: './src/assets/img/icons/dashboard-icons/top-products/iphone-12.png',
+    img: getImageUrl(
+      './src/assets/img/icons/dashboard-icons/top-products/iphone-12.png'
+    ),
     name: 'iPhone 12',
     stars: 4,
     price: '$987',
